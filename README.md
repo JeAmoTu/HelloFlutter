@@ -1,6 +1,6 @@
 # HelloFlutter
 
-A new flutter project.
+My Learning Flutter Project.
 
 ## Getting Started
 
