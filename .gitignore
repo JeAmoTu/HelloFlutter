@@ -4,6 +4,7 @@
 .packages
 .pub/
 build/
-ios/.generated/
+ios
+android
 packages
 pubspec.lock

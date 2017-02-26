@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+
+class MyAppBar extends StatelessWidget {
+  MyAppBar({this.title});
+
+  // Fields in a Widget subclass are always marked "final".
+
+  final Widget title;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      height: 56.0, // in logical pixels
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      decoration: new BoxDecoration(backgroundColor: Colors.blue[500]),
+      // Row is a horizontal, linear layout.
+      child: new Row(
+      // <Widget> is the type of items in the list.
+        children: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.menu),
+            tooltip: 'Navigation menu',
+            onPressed: null, // null disables the button
+          ),
+          // Expanded expands its child to fill the available space.
+          new Expanded(
+            child: title,
+          ),
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+}
