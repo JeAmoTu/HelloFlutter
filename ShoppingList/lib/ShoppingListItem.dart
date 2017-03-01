@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ShoppingList/Product.dart';
 
+
+// dart的typedef很有意思 好象是只要参数一样 就认为同一种函数
 typedef void CartChangedCallback(Product product, bool inCart);
 
 class ShoppingListItem extends StatelessWidget {
@@ -35,8 +37,10 @@ class ShoppingListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return new ListItem(
       onTap: () {
+        // 点击事件
         onCartChanged(product, !inCart);
       },
+        //创建一个圆形的控件 此控件通常用来代表一个user
       leading: new CircleAvatar(
         backgroundColor: _getColor(context),
         child: new Text(product.name[0]),
